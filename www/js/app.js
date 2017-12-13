@@ -42,8 +42,19 @@ angular.module('mc', ['ionic', 'mc.controllers', 'mc.services', 'mc.config'])
         controller: 'SearchCtrl'
       }
     }
+  })
+
+  .state('app.about', {
+         url: '/about/',
+    // abstract: true,
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/about.html',
+        controller: 'AboutCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search/kittens');
+  $urlRouterProvider.otherwise('/app/about/');
 });

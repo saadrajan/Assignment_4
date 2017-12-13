@@ -4,6 +4,9 @@ angular.module('mc.controllers', [])
 
 })
 
+.controller('AboutCtrl', function($scope){
+ 
+})
 .controller('SearchCtrl', function($scope, $stateParams, MediaCloud){
   $scope.keyword = $stateParams.keyword;
   $scope.data = {};
@@ -20,5 +23,4 @@ angular.module('mc.controllers', [])
   console.log("Calling MC from ctrl");
   MediaCloud.recentMentions($scope.keyword);
 })
-
 ;
